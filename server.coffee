@@ -57,6 +57,9 @@ class Drone
 setInterval (->
   control.ref ref
   control.pcmd pcmd
+  control.config 'control:altitude_max', 100000 
+  control.config 'video:video_codec', "131"
+
   control.flush()
 ), 30
 
